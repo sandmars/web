@@ -1,0 +1,76 @@
+[test_pri_failover]
+test_0 = DAHDI/i1/9000
+test_1 = SIP/9001
+test_2 = IAX2/8001
+test_3 = DAHDI/i1/9000
+test_4 = SIP/9001
+test_5 = IAX2/8001
+test_6 = DAHDI/i1/9000
+test_7 = SIP/9001
+test_8 = IAX2/8001
+
+[test_pri_callid]
+test_0 = Mobile:002:07110001
+test_1 = A中国:07220004:003
+test_2 = A中国:07220004:003
+test_3 = Bроссия:01006:4005
+test_4 = Others:072420008:07142345007
+test_5 = Others:072420008:0714045007
+test_6 = Mobile:07220004:003
+test_7 = A中国:07220004:003
+test_8 = A中国:07220004:003
+test_9 = Bроссия:01006:4005
+test_10 = Others:072410008:07142345007
+test_11 = Others:072410008:0714045007
+test_12 = Bроссия:00006:2005
+test_13 = Bроссия:00006:7005
+test_14 = Bроссия:00006:3005
+test_15 = Bроссия:00006:4005
+test_16 = Others:072400008:07142345007
+test_17 = Others:072400008:0714045007
+test_18 = Bроссия:20001:0714201007
+test_19 = Bроссия:20001:0714256007
+test_20 = Bроссия:20001:0714112007
+test_21 = Bроссия:20001:0714023007
+test_22 = Others:072400008:07142345007
+test_23 = Others:072400008:0714045007
+
+[test_pri_forwardnumber]
+test_0 = 123456
+test_1 = 2a3456
+test_2 = 3456b
+test_3 = 456
+test_4 = 56
+
+#F..F.F.F..F.
+#tc_username_001     FAIL
+#tc_username_002     PASS
+#tc_username_003     FAIL
+#tc_username_004     PASS
+#tc_username_005     PASS
+#tc_username_006     FAIL
+#tc_username_007     PASS
+#tc_password_001     FAIL
+#tc_password_002     PASS
+#tc_password_003     PASS
+#tc_password_004     FAIL
+#tc_password_005     PASS
+#
+#F..FF.F..FFF..F.
+#tc_username_001     FAIL
+#tc_username_002     PASS
+#tc_username_003     PASS
+#tc_username_004     FAIL
+#tc_username_005     PASS
+#tc_password_001     FAIL
+#tc_password_002     PASS
+#tc_password_003     PASS
+#tc_password_004     FAIL
+#tc_password_005
+#tc_password_006     FAIL
+#tc_port_001         PASS
+#tc_port_002         FAIL
+#tc_port_003         PASS
+#tc_port_004         PASS
+#tc_port_005         FAIL
+#tc_port_006         FAIL

@@ -1,0 +1,46 @@
+[linkset-siuc1]
+enabled => yes
+enable_st => no
+use_connect => no
+hunting_policy => seq_htl
+context => from-pstn
+language => en
+t35 => 15000,timeout
+subservice => auto
+variant => ITU
+
+[link-l1]
+linkset => siuc1
+channels => 1-15,17-31
+schannel => 16
+firstcic => 1
+sltm => no
+enabled => yes
+
+[link-l2]
+linkset => siuc1
+channels => 1-31
+schannel => 
+firstcic => 32
+enabled => yes
+
+[link-l3]
+linkset => siuc1
+channels => 1-31
+schannel => 
+firstcic => 63
+enabled => yes
+
+[link-l4]
+linkset => siuc1
+channels => 1-31
+schannel => 
+firstcic => 94
+enabled => yes
+
+[host-localhost.localdomain]
+enabled => yes
+;default_linkset => siuc1
+opc => 0x32
+dpc => siuc1:0x1
+links => l1:1,l2:2,l3:3,l4:4

@@ -1,0 +1,92 @@
+[work]
+testcase_set = test_ssh_login;test_web_login;test_system_tools;test_asterisk_api;test_sip_endpoint;test_iax_endpoint;test_asterisk_cli;test_time
+load_from_name = test_time
+
+[localhost]
+hostname = 10.0.2.15
+
+[gateway]
+hostname = 172.16.100.183
+default_hostname = 172.16.100.1
+web_username = admin
+web_password = admin
+web_port = 80
+ssh_username = root
+ssh_password = ixlteuc7Fa9NNqUc
+ssh_password_gsm = pqfowpywpytubdl3124
+ssh_port = 12345
+
+[test_web_login]
+testcases = tc_username_001;tc_username_002;tc_username_003;tc_username_004;tc_username_005;tc_password_001;tc_password_002;tc_password_003;tc_password_004;tc_password_006;tc_port_001;tc_port_002;tc_port_003;tc_port_004;tc_port_005;tc_port_006
+current = admin;admin;80
+tc_username_001 = ;admin;admin;80;
+tc_username_002 = a;admin;admin;80;
+tc_username_003 = abcdefghijklmnopqrstuvwxyz012345;admin;admin;80;
+tc_username_004 = abcdefghijklmnopqrstuvw0123456789;admin;admin;80;
+tc_username_005 = -_+.<>&;admin;admin;80;
+tc_password_001 = admin;adm;adm;80;
+tc_password_002 = admin;admi;admi;80;
+tc_password_003 = admin;abcdefghijklmnopqrstuvwxyz012345;abcdefghijklmnopqrstuvwxyz012345;80;
+tc_password_004 = admin;abcdefghijklmnopqrstuvw0123456789;abcdefghijklmnopqrstuvw0123456789;80;
+tc_password_005 = admin;`~!@$%^&*()_+{}|<>?-=[],/;`~!@$%^&*()_+{}|<>?-=[],/;80;
+tc_password_006 = admin;admin;admini;80;
+tc_port_001 = admin;admin;admin;80;
+tc_port_002 = admin;admin;admin;1023;
+tc_port_003 = admin;admin;admin;1024;
+tc_port_004 = admin;admin;admin;65535;
+tc_port_005 = admin;admin;admin;65536;
+tc_port_006 = admin;admin;admin;12345;
+
+[test_ssh_login]
+testcases = tc_username_001;tc_username_002;tc_username_003;tc_username_004;tc_username_005;tc_username_006;tc_username_007;tc_password_001;tc_password_002;tc_password_003;tc_password_004;tc_password_005
+tc_username_001 = ;admin
+tc_username_002 = a;admin
+tc_username_003 = abcdefghijklmnopqrstuvwxyz;admin
+tc_username_004 = abcdefghijklmnopqrstuvwxy;admin
+tc_username_005 = a-_+.<>&;admin
+tc_username_006 = root;admin
+tc_username_007 = super;admin
+tc_password_001 = admin;adm
+tc_password_002 = admin;admi
+tc_password_003 = admin;abcdefghijklmnopqrstuvwxyz012345
+tc_password_004 = admin;abcdefghijklmnopqrstuvw0123456789
+tc_password_005 = admin;`~!@$%^&*()_+{}|<>?-=[],/
+
+[test_asterisk_api]
+gw_type = dgw
+port = 5038
+testcases = test1;test2;test3
+test1 = admin;admin;0.0.0.0/0.0.0.0;192.168.1.126/255.255.255.0&172.16.8.182/255.255.0.0
+test3 = nihao;zhongguo;0.0.0.0/0.0.0.0;192.168.1.126/255.255.255.0&172.16.8.183/255.255.255.255
+test2 = hello;world;0.0.0.0/0.0.0.0;192.168.1.126/255.255.255.0&172.16.8.182/255.255.0.0
+
+[test_sip_endpoint]
+gw_type = analog_o
+test1 = server;1001;1001;1001;;
+test3 = client;1003;1003;1003;172.16.8.181;
+test2 = anonymous;1002;;;172.16.8.180;1002
+test5 = none;1001;1001;1001;172.16.8.182;1001
+test4 = none;1004;1004;1004;172.16.8.182;1004
+testcases = test1;test2;test3;test4;test5
+
+[test_iax_endpoint]
+gw_type = analog_o
+testcases = test1;test2;test3;test4
+test1 = server;1001;1001;1001;;md5
+test2 = client;1003;1003;1003;172.16.8.184;md5
+test3 = none;1004;1004;1004;172.16.8.185;md5
+test4 = none;1001;1001;1001;172.16.8.185;md5
+
+[test_system_tools]
+testcases = test_asterisk_reboot;test_system_reboot;test_update_sys_3
+test_update_sys_1 = /opt/firmware/DGW100x-1.1.0-1157-release.bin
+test_update_sys_2 = /opt/firmware/wg400-2.1.3.img
+test_update_sys_3 = /opt/firmware/AnalogGateway-O-1.0.1-2015-12-21-18-10-12-forShanghai.bin
+
+[test_time]
+testcases = test_1;test_2;test_3;test_4
+test_1 = client;;;;
+test_2 = ntp;Shanghai;cn.pool.ntp.org;tw.pool.ntp.org;
+test_3 = ntp;Chongqing;cn.pool.ntp.org;tw.pool.ntp.org;
+test_4 = ntp;Hong Kong;cn.pool.ntp.org;tw.pool.ntp.org;
+

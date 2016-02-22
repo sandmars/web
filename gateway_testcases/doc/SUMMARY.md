@@ -1,0 +1,15 @@
+# 测试方案
+* [通用测试方案]()
+    - [WEB测试](README_WEB.md)
+    - [呼叫测试](README_CALLTEST.md)
+    - [多SIP测试](multi_sip_test.md)
+    - [Failover测试](failover_test.md)
+    - [号码变换测试](manipulation_test.md)
+    - [多号码变换测试](multi_manipulation_test.md)
+    - [多路由测试](multi_route_test.md)
+    - [路由顺序测试](route_order_test.md)
+* [DGW-100X测试方案]()
+    - [AutoProvision测试](test_autoprovision.md)
+* [VS-GW-G测试方案]()
+    - [短信](README_SMS.md)
+

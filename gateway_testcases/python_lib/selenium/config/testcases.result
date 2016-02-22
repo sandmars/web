@@ -1,0 +1,14 @@
+[test_ssh_login]
+TC_username_001;TC_username_002;TC_username_003;TC_username_004;TC_username_005;TC_username_006;TC_username_007
+True           ;True           ;False          ;False          ;True           ;False          ;True
+TC_password_001;TC_password_002;TC_password_003;TC_password_004;TC_password_005
+True           ;True           ;False          ;False          ;True
+
+[test_web_login]
+BUG: 由于使用 http://username:password@hostname:port 方式验证，无法验证特殊字符
+TC_username_001;TC_username_002;TC_username_003;TC_username_004;TC_username_005
+True           ;True           ;False          ;False          ;True
+TC_password_001;TC_password_002;TC_password_003;TC_password_004;TC_password_005;TC_password_006
+True           ;True           ;False          ;False          ;True           ;False
+TC_port_001;TC_port_002
+True       ;True

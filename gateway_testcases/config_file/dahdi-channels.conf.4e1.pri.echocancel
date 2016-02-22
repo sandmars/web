@@ -1,0 +1,28 @@
+; Span 1: TE4/0/1 "T4XXP (PCI) Card 0 Span 1" B8ZS/ESF RED
+group=5
+context=port-1
+switchtype=euroisdn
+signalling=pri_net
+channel=1-15,17-31
+
+; Span 2: TE4/0/2 "T4XXP (PCI) Card 0 Span 2" (MASTER) B8ZS/ESF ClockSource
+group=5
+context=port-2
+switchtype=euroisdn
+signalling=pri_net
+channel=32-46,48-62
+
+; Span 3: TE4/0/3 "T4XXP (PCI) Card 0 Span 3" B8ZS/ESF RED
+group=3
+context=dst-echocancel
+switchtype=euroisdn
+signalling=pri_cpe
+channel=63-77,79-93
+
+; Span 4: TE4/0/4 "T4XXP (PCI) Card 0 Span 4" B8ZS/ESF
+group=4
+context=dst-echocancel
+switchtype=euroisdn
+signalling=pri_cpe
+channel=94-108,110-124
+

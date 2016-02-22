@@ -1,0 +1,14 @@
+span=1,0,0,ccs,hdb3
+bchan=1-31
+
+span=2,0,0,ccs,hdb3
+bchan=32-62
+
+span=3,0,0,ccs,hdb3
+bchan=63-93
+
+span=4,0,0,ccs,hdb3
+bchan=94-124
+
+loadzone	= us
+defaultzone	= us
